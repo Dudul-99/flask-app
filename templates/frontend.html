@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1 style="text-align: center;">Welcome to our predictor !</h1>
+        <br><br>
+        <p style="text-align: left;">This predictor will help you to predict if you have been teleported during your journey on the spaceship titanic.</p>
+        <p style="text-align: left;">Please fill the form below to get the prediction</p>
+        <br><br>
+    <form name="form", method="POST", style="text-align: left;">
+        Amount spent in room service?: <input type="number" name="RoomService" placeholder="Enter RoomService spent" required min="0"/>
+        <br><br>
+        Amount spent in food court?: <input type="number" name="FoodCourt", placeholder="Enter FoodCourt spent" required min="0"/>
+        <br><br>
+        Amount spent at the Mall?: <input type="number" name="ShoppingMall", placeholder="Enter ShoppingMall spent" required min="0"/>
+        <br><br>
+        Amount spent in the spa?: <input type="number" name="Spa", placeholder="Enter Spa spent" required min="0"/>
+        <br><br>
+        Amount spent in the VRDeck?: <input type="number" name="VRDeck", placeholder="Enter VRDeck spent" required min="0"/>
+        <br><br>
+        How old are you?: <input type="number" name="Age", placeholder="Enter Age" required min="0"/>
+        <br><br>
+        Number of luxury option choose?: <input type="number" name="luxury", placeholder="Enter luxury" required min="0" max="5"/>
+        <br><br>
+        Do you travel in a group?: <input type="number" name="is_travel_group", placeholder="Enter is_travel_group" required min="0" max="1"/>
+        <br><br>
+        Do you travel in a family?: <input type="number" name="family_journey", placeholder="Enter family_journey" required min="0" max="1"/>
+        <br><br>
+        Do you choose to be cryogenized?: <select name="CryoSleep" required>
+            <option value="">Choose a CryoSleep</option>
+            <option value="True">True</option>
+            <option value="False">False</option>
+          </select>
+        <br><br>
+        Do you have VIP status?: <select name="VIP" required>
+            <option value="">Choose a VIP</option>
+            <option value="True">True</option>
+            <option value="False">False</option>
+          </select>
+        <br><br>
+        What planet are you from?: <select name="HomePlanet" required>
+            <option value="">Choose a planet</option>
+            <option value="Earth">Earth</option>
+            <option value="Europa">Europa</option>
+            <option value="Mars">Mars</option>
+          </select>
+        <br><br>
+        Where are you travelling??: <select name="Destination" required>
+            <option value="">Choose a destination</option>
+            <option value="TRAPPIST-1e">TRAPPIST-1e</option>
+            <option value="55 Cancri e">55 Cancri e</option>
+            <option value="PSO J318.5-22">PSO J318.5-22</option>
+          </select>
+        <br><br>
+        What deck are you on?: <select name="deck" required>
+          <option value="">Choose a deck</option>
+          <option value="F">F</option>
+          <option value="G">G</option>
+          <option value="E">E</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+          <option value="A">A</option>
+          <option value="T">T</option>
+        </select>
+      <br><br>
+      What side are you on?: <select name="side" required>
+            <option value="">Choose a side</option>
+            <option value="S">S</option>
+            <option value="P">P</option>
+          </select>
+        <br><br>
+        <button value="Submit">run</button>
+    </form>
+    <p style="text-align: center;">{{ output }}</p>
+    </body>
+</html>
